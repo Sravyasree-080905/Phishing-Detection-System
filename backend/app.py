@@ -23,18 +23,31 @@ def predict():
         if not url:
             return jsonify({"error": "URL is required"}), 400
 
-        # 🔑 Extract features (dict)
         features = extract_features(url)
-
-        # 🔑 Convert dict → DataFrame (THIS IS THE FIX)
         df = pd.DataFrame([features])
 
         prediction = model.predict(df)[0]
 
+        # Probability of each class
+        probabilities = model.predict_proba(df)[0]
+
+        confidence = round(max(probabilities) * 100, 2)
+
+        if confidence >= 90:
+            risk_level = "HIGH"
+        elif confidence >= 70:
+            risk_level = "MEDIUM"
+        else:
+            risk_level = "LOW"
+
         return jsonify({
-            "phishing": int(prediction),
-            "result": "PHISHING" if prediction == 1 else "SAFE"
+            "prediction": "PHISHING" if prediction == 1 else "LEGITIMATE",
+            "confidence": confidence,
+            "risk_level": risk_level,
+            "phishing": int(prediction)
         })
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
