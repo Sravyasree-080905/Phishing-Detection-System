@@ -5,7 +5,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
         try {
 
             const response = await fetch(
-                "https://phishing-detection-api-5-07m6.onrender.com/predict",
+                "http://127.0.0.1:5000/predict",
                 {
                     method: "POST",
                     headers: {
