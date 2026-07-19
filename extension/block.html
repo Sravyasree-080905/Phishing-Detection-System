@@ -185,17 +185,40 @@
 </div>
 
 <script>
-    const score = 90;
-    const riskFill = document.getElementById("riskFill");
-    const riskScore = document.getElementById("riskScore");
+    chrome.storage.local.get(
+
+["confidence","risk_level","prediction"],
+
+function(data){
+
+    const score = data.confidence || 90;
+
+    const risk = data.risk_level || "HIGH";
+
+    document.getElementById("riskText").innerText =
+        "Risk Level: " + risk;
+
+    document.querySelector(".risk-badge").innerText =
+        risk;
+
+    const riskFill =
+        document.getElementById("riskFill");
+
+    const riskScore =
+        document.getElementById("riskScore");
 
     riskFill.style.width = "0%";
 
     setTimeout(() => {
-        riskFill.style.width = score + "%";
-    }, 200);
 
-    riskScore.innerText = `Detection Confidence: ${score}%`;
+        riskFill.style.width = score + "%";
+
+    },200);
+
+    riskScore.innerText =
+        `Detection Confidence: ${score}%`;
+
+});
 </script>
 
 
