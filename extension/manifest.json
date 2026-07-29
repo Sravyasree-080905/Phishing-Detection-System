@@ -2,10 +2,16 @@
   "manifest_version": 3,
   "name": "Phishing URL Interceptor",
   "version": "1.0",
-  "permissions": ["tabs"],
-  "host_permissions": [
-    "https://phishing-detection-api-5-07m6.onrender.com/*"
+
+  "permissions": [
+    "tabs",
+    "storage"
   ],
+
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
+
   "background": {
     "service_worker": "background.js"
   }

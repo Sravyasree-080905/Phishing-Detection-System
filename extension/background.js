@@ -19,20 +19,21 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 
             const result = await response.json();
 
-            const isPhishing =
-                result.prediction === "PHISHING";
+            // Save the prediction details
+            chrome.storage.local.set({
 
-            if (isPhishing) {
+                confidence: result.confidence,
 
-                chrome.storage.local.set({
+                risk_level: result.risk_level,
 
-                    confidence: result.confidence,
+                prediction: result.prediction,
 
-                    risk_level: result.risk_level,
+                reasons: result.reasons
 
-                    prediction: result.prediction
+            });
 
-                });
+            // Block only phishing websites
+            if (result.prediction === "PHISHING") {
 
                 chrome.tabs.update(tabId, {
 
