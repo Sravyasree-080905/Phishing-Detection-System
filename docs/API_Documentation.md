@@ -26,7 +26,7 @@ http://127.0.0.1:5000
    confidence : 97.33
    phishing   : 1
    prediction : PHISHING
-   reasons    : {Website uses HTTP instead of 
+   reasons    : Website uses HTTP instead of 
                 HTTPS., URL contains 
                 phishing-related keywords., Domain 
                 contains hyphens which may indicate 
@@ -50,7 +50,7 @@ http://127.0.0.1:5000
    confidence : 88.08
    phishing   : 0
    prediction : LEGITIMATE
-   reasons    : {No suspicious URL characteristics 
+   reasons    : No suspicious URL characteristics 
                 detected.
    risk_level : SAFE
    
