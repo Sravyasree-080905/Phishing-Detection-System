@@ -83,6 +83,10 @@ Phishing-URL-Interceptor
 
 ---
 
+## 🏗️ System Architecture
+
+![Architecture](architecture/architecture_diagram.png)
+
 # 🔄 Working Flow
 
 1. User visits a website.
@@ -155,10 +159,6 @@ Reasons
 - Domain reputation analysis
 - Deep Learning based phishing detection
 - Support for Firefox and Microsoft Edge
-
-## 🏗️ System Architecture
-
-![Architecture](architecture/architecture_diagram.png)
 
 ---
 
