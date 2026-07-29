@@ -87,6 +87,16 @@ Phishing-URL-Interceptor
 
 ![Architecture](architecture/architecture_diagram.png)
 
+## Extension Loaded in Chrome
+<img width="1875" height="882" alt="Screenshot 2026-07-29 213603" src="https://github.com/user-attachments/assets/ab533e97-cdc5-4e55-a8ac-5522eb14f7ac" />
+
+## Legitimate Website
+<img width="1863" height="965" alt="Screenshot 2026-07-29 220023" src="https://github.com/user-attachments/assets/8df4d310-62d2-483d-9183-08bd1a0dc1b5" />
+
+## Phishing Website
+<img width="863" height="887" alt="Screenshot 2026-07-29 205253" src="https://github.com/user-attachments/assets/2b6c6f04-72e9-4a76-8da3-a20bcbce8b70" />
+
+
 # 🔄 Working Flow
 
 1. User visits a website.
