@@ -30,7 +30,7 @@ http://127.0.0.1:5000
                 HTTPS., URL contains 
                 phishing-related keywords., Domain 
                 contains hyphens which may indicate 
-                impersonation.}
+                impersonation.
    risk_level : HIGH
 }
 ```
@@ -51,7 +51,7 @@ http://127.0.0.1:5000
    phishing   : 0
    prediction : LEGITIMATE
    reasons    : {No suspicious URL characteristics 
-                detected.}
+                detected.
    risk_level : SAFE
    
 }
