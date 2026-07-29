@@ -146,8 +146,6 @@ Reasons
 - Website uses HTTP instead of HTTPS.
 - URL contains phishing-related keywords.
 - Domain contains hyphens.
-```
-
 ---
 
 # 🚀 Future Enhancements
